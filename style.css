@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Montserrat, serif;
+    font-family: Montserrat, sans-serif;
     font-size: 13px;
     color: #515076;
 }
@@ -20,7 +20,7 @@ body {
 
 .product-card {
     width: 340px;
-    height: 573px;
+    min-height: 573px;
     background-color: #F7F7FA;
     list-style: none;
     padding: 25px;
@@ -60,15 +60,10 @@ body {
     display: flex; 
     justify-content: space-between; 
     padding-top: 25px;
+    font-size: 20px;
+    line-height: 24px;
 }
 
 .product-price-title {
     font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-}
-
-.product-price-value {
-    font-size: 20px;
-    line-height: 24px;
 }
