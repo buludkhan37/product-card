@@ -9,12 +9,29 @@ body {
     font-family: Montserrat, sans-serif;
     font-size: 13px;
     color: #515076;
+    background-image: url(./images/bg-image.png);
+    background-repeat: no-repeat;
+    background-size: 790px 697px;
+    background-position: calc(50% - 160px) 0;
+}
+
+.products-cards {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    max-width: 1110px;
+    margin: 0 auto;
 }
 
 .title {
+    font-weight: 400;
     font-size: 70px;
     line-height: 78px;
     text-align: center;
+    padding-top: 220px;
     padding-bottom: 110px;
 }
 
@@ -22,9 +39,7 @@ body {
     width: 340px;
     min-height: 573px;
     background-color: #F7F7FA;
-    list-style: none;
     padding: 25px;
-    margin-bottom: 45px;
 }
 
 .product-skin-type {
