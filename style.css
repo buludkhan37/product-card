@@ -40,6 +40,15 @@ body {
     min-height: 573px;
     background-color: #F7F7FA;
     padding: 25px;
+    box-shadow: 2px 2px 10px 0 rgba(81, 80, 118, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 12px 12px 25px 0 rgba(81, 80, 118, 0.1);
+    transition: 0.5s ease-in-out;
 }
 
 .product-skin-type {
@@ -81,4 +90,61 @@ body {
 
 .product-price-title {
     font-weight: 700;
+}
+
+.buy-btn {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    width: 102px;
+    height: 31.62px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(70, 79, 96, 0.16);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(81, 80, 118, 1);
+}
+
+.buy-btn:hover {
+    border: 2px solid rgba(79, 219, 138, 0.2);
+    cursor: pointer;
+    color: rgba(23, 28, 38, 1);
+}
+
+.buy-btn:active {
+    background-color: rgba(247, 249, 252, 1);
+    color: rgba(134, 143, 160, 1);
+    border: 2px solid rgba(70, 79, 96, 0.2);
+}
+
+.product-purchase {
+    margin-top: auto;
+}
+
+@media (max-width: 1127px) {
+    body {
+        background-position: calc(50% + 30px) 0;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 739px) {
+    body {
+        background-position: calc(50% + 30px) calc(20% - 600px);
+        background-size: 400px 300px;
+    }
+
+    .title {
+        font-size: 30px;
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
 }
