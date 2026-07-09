@@ -3,7 +3,7 @@ const changeFirstCardColorBtn = document.getElementById('change-first-card-color
 const firstProductCard = document.querySelector('.product-card');
 
 changeFirstCardColorBtn.addEventListener('click', () => {
-    firstProductCard.style.backgroundColor = 'green';
+    firstProductCard.classList.toggle('product-card--blue');
 });
 
 
@@ -11,7 +11,7 @@ const changeAllCardsColorBtn = document.getElementById('change-all-cards-color')
 const allProductCards = document.querySelectorAll('.product-card');
 
 changeAllCardsColorBtn.addEventListener('click', () => {
-    allProductCards.forEach((card) => card.style.backgroundColor = 'brown');
+    allProductCards.forEach((card) => card.classList.toggle('product-card--green'));
 });
 
 
@@ -46,7 +46,6 @@ mainTitle.addEventListener('mouseenter', () => {
 const chgColorBtns = document.querySelectorAll('.actions__button-change-color');
 chgColorBtns.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-        console.log(index)
-        allProductCards[index].classList.toggle('product-card--active');
+        allProductCards[index].classList.toggle('product-card--active')
     })
 });
