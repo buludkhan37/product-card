@@ -22,9 +22,11 @@ let productName = 'IPhone 17 Pro MAX';
 let productPrice = 1500;
 
 function purchaseProduct(currentBudget) {
-    currentBudget > productPrice 
-    ? console.log(`${productName} приобретен. Спасибо за покупку!`) 
-    : console.log(`Вам не хватает ${productPrice - currentBudget}$, пополните баланс`);
+    if (currentBudget > productPrice) {
+        console.log(`${productName} приобретен. Спасибо за покупку!`);
+    }  else {
+        console.log(`Вам не хватает ${productPrice - currentBudget}$, пополните баланс`);
+    }
 }
 
 purchaseProduct(1400);
