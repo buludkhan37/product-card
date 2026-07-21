@@ -35,9 +35,7 @@ console.log(car);
 // Задание 5. Написать функцию, которая проверяет наличие макс. скорости, или добавляет ее
 
 function checkMaxCarSpeed(obj) {
-    if (obj.hasOwnProperty('maxSpeed')) {
-        return;
-    } else {
+    if (!obj.hasOwnProperty('maxSpeed')) {
         obj.maxSpeed = 200;
     }
 }
@@ -133,7 +131,10 @@ console.log(booksList);
 // Задание 10. Задание про map
 
 function  markRareBooks(books) {
-    return books.map(book => [{...book, isRare: book.year > 2000 ? true : false}]);
+    return books.map(book => ({
+        ...book,
+        isRare: book.year > 2000
+    }))
 }
 
 console.log(markRareBooks(booksList));
