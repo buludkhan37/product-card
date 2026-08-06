@@ -15,7 +15,7 @@ console.log(booksArr.includes('Блеск убеждений'));
 
 // 4
 function reversedArray(arr) {
-    return arr.reverse();
+    return arr.toReversed();
 }
 
 console.log(reversedArray(booksArr));
@@ -24,7 +24,7 @@ console.log(reversedArray(newArray));
 // ---------------------------- Level 2:
 
 // 7
-const newCommentsList = commentsList.filter(comment => comment.email.endsWith('.com'));
+const newCommentsList = commentsList.filter(comment => comment.email.includes('.com'));
 console.log(newCommentsList);
 
 // 8
