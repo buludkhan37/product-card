@@ -1,0 +1,42 @@
+export const allProducts = [
+    {
+        img: '/images/moisturizing-mousse.png',
+        skinType: 'для нормальной кожи',
+        title: 'Увлажняющий мусс',
+        description: 'Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.',
+        compoundLists: ['активные натуральные комплексы', 'витамины С, А, РР, В И Е', 'солнцезащитные компоненты', 'Пантенол', 'Экстракт алоэ вера'],
+        priceValue: '2750 ₽',
+    },
+    {
+        img: '/images/moisturizing-mask.png',
+        skinType: 'для нормальной кожи',
+        title: 'Увлажняющая маска',
+        description: 'Способствует удерживанию влаги в верхних слоях кожи.',
+        compoundLists: ['воски', 'минералы', 'масла'],
+        priceValue: '2750 ₽',
+    },
+    {
+        img: '/images/face-wash-gel.png',
+        skinType: 'для нормальной кожи',
+        title: 'Гель для умывания',
+        description: 'Интенсивно очищает, не повреждает защитный барьер кожи.',
+        compoundLists: ['минералы', 'витамины С, А, РР, В И Е', 'солнцезащитные компоненты'],
+        priceValue: '2750 ₽',
+    },
+    {
+        img: '/images/gift-set-1.png',
+        skinType: 'для нормальной кожи',
+        title: 'Подарочный набор №1',
+        description: 'Набор, состоящий из увлажняющего крема и маски.',
+        compoundLists: ['воски', 'минералы', 'масла'],
+        priceValue: '2750 ₽',
+    },
+    {
+        img: '/images/gift-set-5.png',
+        skinType: 'для нормальной кожи',
+        title: 'Подарочный набор №5',
+        description: 'Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.',
+        compoundLists: ['воски', 'минералы', 'масла'],
+        priceValue: '2750 ₽',
+    },
+];
