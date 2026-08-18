@@ -1,17 +1,24 @@
 const GOOGLE_URL = 'https://google.com';
 const changeFirstCardColorBtn = document.getElementById('change-first-card-color');
-const firstProductCard = document.querySelector('.product-card');
+
 
 changeFirstCardColorBtn.addEventListener('click', () => {
-    firstProductCard.classList.toggle('product-card--blue');
+    const firstProductCard = document.querySelector('.product-card');
+    
+    if (firstProductCard) {
+        firstProductCard.classList.toggle('product-card--blue');
+    }
 });
 
 
 const changeAllCardsColorBtn = document.getElementById('change-all-cards-color');
-const allProductCards = document.querySelectorAll('.product-card');
 
 changeAllCardsColorBtn.addEventListener('click', () => {
-    allProductCards.forEach((card) => card.classList.toggle('product-card--green'));
+    const allProductCards = document.querySelectorAll('.product-card');
+
+    if (allProductCards) {
+        allProductCards.forEach((card) => card.classList.toggle('product-card--green'));
+    }
 });
 
 
@@ -40,12 +47,4 @@ function showConsoleMessage(message) {
 const mainTitle = document.querySelector('.title');
 mainTitle.addEventListener('mouseenter', () => {
     console.log(mainTitle.textContent);
-});
-
-
-const chgColorBtns = document.querySelectorAll('.actions__button-change-color');
-chgColorBtns.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        allProductCards[index].classList.toggle('product-card--active')
-    })
 });

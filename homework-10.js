@@ -23,6 +23,8 @@ const count = countOfProducts();
 
 if (count !== null) {
     showProductsCards(allProducts, count);
+
+    changeProductCardColor();
 } else {
     createParagraph();
 }
@@ -55,3 +57,16 @@ function showProductsCards(array, count) {
     })
 }
 
+function changeProductCardColor() {
+    const chgColorBtns = document.querySelectorAll(
+        '.actions__button-change-color'
+    );
+
+    chgColorBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.product-card');
+
+            card.classList.toggle('product-card--active');
+        });
+    });
+}
