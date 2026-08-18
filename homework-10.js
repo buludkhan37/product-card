@@ -36,8 +36,8 @@ function createParagraph() {
     products.append(paragraphCopy);
 }
 
-function showProductsCards(array, count) {
-    array.slice(0, count).forEach(product => {
+function showProductsCards(productsArray, count) {
+    productsArray.slice(0, count).forEach(product => {
         const productCopy = productTemplate.content.cloneNode(true);
         productCopy.querySelector('.product-card__image').src = product.img;
         productCopy.querySelector('.product-card__skin-type').textContent = product.skinType;
