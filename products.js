@@ -5,7 +5,7 @@ export const allProducts = [
         title: 'Увлажняющий мусс',
         description: 'Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.',
         compoundLists: ['активные натуральные комплексы', 'витамины С, А, РР, В И Е', 'солнцезащитные компоненты', 'Пантенол', 'Экстракт алоэ вера'],
-        priceValue: '2750 ₽',
+        priceValue: 2750,
     },
     {
         img: '/images/moisturizing-mask.png',
@@ -13,7 +13,7 @@ export const allProducts = [
         title: 'Увлажняющая маска',
         description: 'Способствует удерживанию влаги в верхних слоях кожи.',
         compoundLists: ['воски', 'минералы', 'масла'],
-        priceValue: '2750 ₽',
+        priceValue: 2750,
     },
     {
         img: '/images/face-wash-gel.png',
@@ -21,7 +21,7 @@ export const allProducts = [
         title: 'Гель для умывания',
         description: 'Интенсивно очищает, не повреждает защитный барьер кожи.',
         compoundLists: ['минералы', 'витамины С, А, РР, В И Е', 'солнцезащитные компоненты'],
-        priceValue: '2750 ₽',
+        priceValue: 2750,
     },
     {
         img: '/images/gift-set-1.png',
@@ -29,7 +29,7 @@ export const allProducts = [
         title: 'Подарочный набор №1',
         description: 'Набор, состоящий из увлажняющего крема и маски.',
         compoundLists: ['воски', 'минералы', 'масла'],
-        priceValue: '2750 ₽',
+        priceValue: 2750,
     },
     {
         img: '/images/gift-set-5.png',
@@ -37,6 +37,6 @@ export const allProducts = [
         title: 'Подарочный набор №5',
         description: 'Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.',
         compoundLists: ['воски', 'минералы', 'масла'],
-        priceValue: '2750 ₽',
+        priceValue: 2750,
     },
 ];

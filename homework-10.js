@@ -43,7 +43,7 @@ function showProductsCards(productsArray, count) {
         productCopy.querySelector('.product-card__skin-type').textContent = product.skinType;
         productCopy.querySelector('.product-card__title').textContent = product.title;
         productCopy.querySelector('.product-card__description').textContent = product.description;
-        productCopy.querySelector('.product-card__price-value').textContent = product.priceValue;
+        productCopy.querySelector('.product-card__price-value').innerHTML = `${product.priceValue} &#8381;`;
         const compoundLists = productCopy.querySelector('.product-card__compounds-lists');
 
         product.compoundLists.forEach(compound => {
