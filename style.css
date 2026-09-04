@@ -173,3 +173,17 @@ body {
         padding-bottom: 70px;
     }
 }
+
+.product-card__paragraph {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px 24px;
+
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    border-radius: 6px;
+    background-color: #F7F7FA;
+}
