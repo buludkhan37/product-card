@@ -46,10 +46,113 @@
         </li>
     </template>
 
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <div class="footer__brand-title">
+                    <span>Product Cards</span>
+                </div>
+                <div class="footer__brand-description">
+                    <span>У нас самые лучшие продукты для кожи!</span>
+                </div>
+                <div class="footer__brand-socials">
+                    <a class="footer__brand-social" href="#" aria-label="Telegram">
+                        <img src="images/telegram.png" alt="telegram">
+                    </a>
+                    <a class="footer__brand-social" href="#" aria-label="VK">
+                        <img src="images/vk.png" alt="vk">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__subscribe">
+                <div class="footer__subscribe-title">
+                    <span>Подпишись на наши акции:</span>
+                </div>
+                <form class="footer__form" action="">
+                    <input class="footer__input" type="email" name="email" placeholder="Введи Email..." required>
+                    <button class="footer__button" type="submit">Подписаться</button>
+                </form>
+                <div class="footer__registration">
+                    <button class="footer__registration-button" type="button">
+                        Регистрация
+                    </button>
+                </div>
+            </div>
+            <nav class="footer__navigation">
+                <h3 class="footer__navigation-title">Быстрые ссылки</h3>
+                <ul class="footer__navigation-list">
+                    <li>
+                        <a class="footer__navigation-link" href="#">Главная</a>
+                    </li>
+                    <li>
+                        <a class="footer__navigation-link" href="#">Магазин</a>
+                    </li>
+                    <li>
+                        <a class="footer__navigation-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__copyright">
+            <hr class="footer__copyright-divider">
+            <div class="footer__copyright-text">
+                <span>www.product-cards.com©all right reserve</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="registrationModal">
+        <div class="overlay" data-close></div>
+        <div class="modal__content">
+            <button class="modal__close" type="button" aria-label="Закрыть" data-close>&times;</button>
+
+            <h2 class="modal__title">Регистрация</h2>
+
+            <form class="modal__form" id="registrationForm" novalidate>
+                <label class="modal__label">
+                    Имя
+                    <input class="modal__input" type="text" name="firstName" placeholder="Введите имя" required minlength="2">
+                </label>
+
+                <label class="modal__label">
+                    Фамилия
+                    <input class="modal__input" type="text" name="lastName" placeholder="Введите фамилию" required minlength="2">
+                </label>
+
+                <label class="modal__label">
+                    Дата рождения
+                    <input class="modal__input" type="date" name="birthDate" required>
+                </label>
+
+                <label class="modal__label">
+                    Логин
+                    <input class="modal__input" type="text" name="login" placeholder="Придумайте логин" required minlength="3" pattern="[A-Za-z0-9_]+">
+                </label>
+
+                <label class="modal__label">
+                    Пароль
+                    <input class="modal__input" type="password" name="password" placeholder="Введите пароль" required minlength="6">
+                </label>
+
+                <label class="modal__label">
+                    Повторите пароль
+                    <input class="modal__input" type="password" name="passwordRepeat" placeholder="Повторите пароль" required minlength="6">
+                </label>
+
+                <div class="modal__error" id="modalError"></div>
+
+                <button class="modal__submit" type="submit">Зарегистрироваться</button>
+                <button class="modal__submit" type="reset">Сбросить</button>
+            </form>
+        </div>
+    </div>
+
     <script src="main.js"></script>
     <script src="homework-7.js"></script>
     <script src="homework-8.js"></script>
     <script type="module" src="homework-9.js"></script>
     <script type="module" src="homework-10.js"></script>
+    <script type="module" src="homework-11.js"></script>
 </body>
 </html>
