@@ -1,9 +1,8 @@
-const footerInput = document.querySelector('.footer__input');
 const footerForm = document.querySelector('.footer__form');
 const modal = document.getElementById('registrationModal');
-const openBtn = document.querySelector('.footer__registration-button');
+const openModalBtn = document.querySelector('.footer__registration-button');
 const closeElements = modal.querySelectorAll('[data-close]');
-const form = document.getElementById('registrationForm');
+const registrationForm = document.getElementById('registrationForm');
 const errorBox = document.getElementById('modalError');
 
 footerForm.addEventListener('submit', (event) => {
@@ -19,11 +18,11 @@ function openModal() {
 
 function closeModal() {
     modal.classList.remove('modal-showed');
-    form.reset();
+    registrationForm.reset();
     errorBox.textContent = '';
 }
 
-openBtn.addEventListener('click', openModal);
+openModalBtn.addEventListener('click', openModal);
 closeElements.forEach((el) => el.addEventListener('click', closeModal));
 
 document.addEventListener('keydown', (event) => {
@@ -32,17 +31,17 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-form.addEventListener('submit', (event) => {
+registrationForm.addEventListener('submit', (event) => {
     event.preventDefault();
     errorBox.textContent = '';
 
-    if (!form.checkValidity()) {
+    if (!registrationForm.checkValidity()) {
         errorBox.textContent = 'Заполните все поля корректно.';
-        form.reportValidity();
+        registrationForm.reportValidity();
         return;
     }
 
-    const formData = new FormData(form);
+    const formData = new FormData(registrationForm);
     const password = formData.get('password');
     const passwordRepeat = formData.get('passwordRepeat');
 
