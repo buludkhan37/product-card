@@ -1,49 +1,48 @@
-const footerForm = document.querySelector('.footer__form');
-const modal = document.getElementById('registrationModal');
+import { Modal } from "./Modal.js";
+import { Form } from "./Form.js";
+
 const openModalBtn = document.querySelector('.footer__registration-button');
-const closeElements = modal.querySelectorAll('[data-close]');
-const registrationForm = document.getElementById('registrationForm');
 const errorBox = document.getElementById('modalError');
+
+const modal = new Modal('registrationModal');
+const registrationForm = new Form('registrationForm');
+const footerForm = new Form('.footer__form')
 
 footerForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const formData = new FormData(footerForm);
-    const data = Object.fromEntries(formData.entries());
+
+    const data = footerForm.getValues();
     console.log(data);
 })
 
-function openModal() {
-    modal.classList.add('modal-showed');
-}
-
 function closeModal() {
-    modal.classList.remove('modal-showed');
-    registrationForm.reset();
+    modal.close();
+    registrationForm.reset()
     errorBox.textContent = '';
 }
 
-openModalBtn.addEventListener('click', openModal);
-closeElements.forEach((el) => el.addEventListener('click', closeModal));
+openModalBtn.addEventListener('click', () => {
+    modal.open()
+});
 
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && modal.classList.contains('modal-showed')) {
+    if (event.key === 'Escape' && modal.isOpen()) {
         closeModal();
     }
 });
 
-registrationForm.addEventListener('submit', (event) => {
+registrationForm.form.addEventListener('submit', (event) => {
     event.preventDefault();
     errorBox.textContent = '';
 
-    if (!registrationForm.checkValidity()) {
+    if (!registrationForm.isValid()) {
         errorBox.textContent = 'Заполните все поля корректно.';
-        registrationForm.reportValidity();
         return;
     }
 
-    const formData = new FormData(registrationForm);
-    const password = formData.get('password');
-    const passwordRepeat = formData.get('passwordRepeat');
+    const formData = registrationForm.getValues();
+    const password = formData.password;
+    const passwordRepeat = formData.passwordRepeat;
 
     if (password !== passwordRepeat) {
         errorBox.textContent = 'Пароли не совпадают.';
@@ -51,10 +50,10 @@ registrationForm.addEventListener('submit', (event) => {
     }
 
     const user = {
-        firstName: formData.get('firstName').trim(),
-        lastName: formData.get('lastName').trim(),
-        birthDate: formData.get('birthDate'),
-        login: formData.get('login').trim(),
+        firstName: formData.firstName.trim(),
+        lastName: formData.lastName.trim(),
+        birthDate: formData.birthDate,
+        login: formData.login.trim(),
         password,
         createdOn: new Date()
     };
