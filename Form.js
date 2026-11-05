@@ -15,4 +15,11 @@ export class Form {
     reset() {
         this.form.reset()
     }
+
+    onSubmit(callback) {
+        this.form.addEventListener('submit', (event) => {
+            event.preventDefault()
+            callback();
+        })
+    }
 }

@@ -6,11 +6,9 @@ const errorBox = document.getElementById('modalError');
 
 const modal = new Modal('registrationModal');
 const registrationForm = new Form('registrationForm');
-const footerForm = new Form('.footer__form')
+const footerForm = new Form('footer__form')
 
-footerForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
+footerForm.onSubmit(() => {
     const data = footerForm.getValues();
     console.log(data);
 })
@@ -31,8 +29,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-registrationForm.form.addEventListener('submit', (event) => {
-    event.preventDefault();
+registrationForm.onSubmit(() => {
     errorBox.textContent = '';
 
     if (!registrationForm.isValid()) {
@@ -60,4 +57,4 @@ registrationForm.form.addEventListener('submit', (event) => {
 
     console.log(user);
     closeModal();
-});
+})
