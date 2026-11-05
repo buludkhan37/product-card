@@ -1,3 +1,10 @@
+import './homework-7.js';
+import './homework-8.js';
+import './homework-9.js';
+import './homework-10.js';
+import './homework-11.js';
+import './homework-12.js';
+
 const GOOGLE_URL = 'https://google.com';
 const changeFirstCardColorBtn = document.getElementById('change-first-card-color');
 
