@@ -81,7 +81,7 @@ class Coffee extends Drink {
 
     getInfo() {
         const defaultInfo = super.getInfo();
-        return `${defaultInfo}. Зерна: ${this.beansType}, молоко: ${this.milkType}, сироп: ${this.syrup}`
+        return `${defaultInfo} Зерна: ${this.beansType}, молоко: ${this.milkType}, сироп: ${this.syrup}`
     }
 }
 
