@@ -62,10 +62,10 @@ class Tea extends Drink {
 
     getInfo() {
         const defaultInfo = super.getInfo();
-        return `
-            ${defaultInfo}.
-            Чай ${this.teaType}, сахар: ${this.sugar}, лимон: ${this.isLimon}
-        `
+        return `${defaultInfo} ` +
+            `Чай ${this.teaType}, ` +
+            `сахар: ${this.sugar}, ` +
+            `лимон: ${this.isLimon}`;
     }
 }
 
@@ -98,13 +98,7 @@ class Mocktail extends Drink {
 
     getInfo() {
         const defaultInfo = super.getInfo();
-        return `
-            ${defaultInfo}.
-            Добавлено - мороженое: ${this.iceCream}, 
-            молоко: ${this.milk}, 
-            сироп: ${this.syrup}, 
-            фрукт: ${this.fruit}
-        `
+        return `${defaultInfo} Мороженое: ${this.iceCream}, молоко: ${this.milk}, сироп: ${this.syrup}, фрукт: ${this.fruit}`
     }
 }
 
