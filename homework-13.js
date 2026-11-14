@@ -15,7 +15,7 @@ class Drink {
     }
 
     getTemp() {
-        return `Температура напитка ${this.#temp}`;
+        return this.#temp;
     }
 
     setTemp(newTemp) {
@@ -34,7 +34,7 @@ class Drink {
 
 // Реализован наследник Лимонад
 
-class Limonade extends Drink {
+class Lemonade extends Drink {
     constructor(name, size, price, temp, ice, flavor) {
         super(name, size, price, temp)
         this.ice = ice;
