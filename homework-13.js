@@ -4,6 +4,11 @@ class Drink {
     #temp;
 
     constructor(name, size, price, temp) {
+        if (new.target === Drink) {
+            throw new Error(
+                'Нельзя создать экземпляр абстрактного класса Drink'
+            );
+        }
         this.name = name;
         this.size = size;
         this.price = price;
@@ -31,6 +36,8 @@ class Drink {
         console.log(`Пожалуйста, Ваш ${this.#prepareDrink()} Хорошего дня!`)
     }
 }
+
+const drink = new Drink('dasda','dsada', 'dasdd', 'dasda');
 
 // Реализован наследник Лимонад
 
